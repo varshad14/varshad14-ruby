@@ -1,42 +1,36 @@
-=begin 3.Print the  sum,  difference  and   product of   two  complex numbers by  creating a   classnamed 'Complex' with separate methods
- for each operation whose real and imaginaryparts are entered by user.
+=begin
+4.Write a program by creating an 'Employee' class having the following methods and printthe final salary
+1 - 'getInfo()' which takes the salary, number of hours of work per day of employee asparameter2   -   'AddSal()'   which
+   adds   $10   to   salary   of   the   employee   if   it   is   less   than   $500.3 - 'AddWork()' which adds $5 to 
+   salary of employee if the number of hours of work perday is more than 6 hours
 =end
-class ComplexNum                               #CLASS name Complex
-    def firstNum                                       #first method of class
-        puts "Enter 1st number's real part:"
-        @a=gets.chomp.to_i
-        puts "Enter 1st number's imaginary part:"
-        @b=gets.chomp.to_i
-        num1=Complex(@a,@b)              #converting integer  into complex 
+class Employee                     #classname
+    def get_info                 #1st method to take input from user  
+        print "Enter salary:"
+        @salary=gets 
+        print "No. of hrs worked:"
+        @hrs=gets
     end
     
-    def secondNum
-        puts "Enter 1st number's real part:"
-        @c=gets.chomp.to_i
-        puts "Enter 1st number's imaginary part:"
-        @d=gets.chomp.to_i
-        num2=Complex(@c,@d)
-           end
+    def add_sal                #2nd method to add bonus if salary is less than  500
+        if  @salary.to_i< 500             #condition to check if salary is less than 500
+            @bonus1=+ 10                  #if true then bonus will increase by 10
+        end
+    end
     
-    def addition                                                             #method to add 2 complex numbers
-       add= @num1.to_c + @num2.to_c
-       puts "Addition is :#{add}"
+    def add_work                 #3rd method to add bonus if work time is more than  6
+        if @hrs.to_i> 6        #condition to check if work time is more than 5
+           @bonus2=+5              #if true then bonus will increase by 5
+       end
+    end
+    def final_sal
+       final=@salary.to_i+@bonus1.to_i+@bonus2.to_i
+       puts "Final salary is #{final}"
    end
-   
-   def subtraction                                 #method to subtract 2 complex numbers
-       sub= @num1.to_c - @num2.to_c
-       puts "Subtraction is :#{sub}"
-   end
-   
-   def product                   #method to multiply 2 complex numbers
-       prod= @num1.to_c * @num2.to_c
-       puts "Multiplication is :#{prod}"
-   end
-end
+end 
 
-c=ComplexNum.new                          #instance of class
-c.firstNum                                       #calling methods
-c.secondNum
-c.addition
-c.subtraction
-c.product
+e1=Employee.new
+e1.get_info
+e1.add_sal
+e1.add_work
+e1.final_sal     
