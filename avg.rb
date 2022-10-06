@@ -3,8 +3,8 @@
 named 'Average'having a method to calculate and print the average
 =end
 
-class Average num1,num2,num3
-    def initialize 
+class Average 
+    def initialize num1,num2,num3
         @num1=num1                    #using instance variables and that                                                                              converting string to integer
         @num2=num2
         @num3=num3
@@ -14,7 +14,8 @@ class Average num1,num2,num3
        @AVG= ( (@num1 + @num2 + @num3)/3 ).to_f
        puts "Average is #{@AVG}"
     end
-   end
+    
+end
 
  a=Average.new(3,4,5)                      #instance            
-    a.calculate
+ a.calculate
