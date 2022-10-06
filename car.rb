@@ -9,21 +9,21 @@ CarModel, CarName, CarPriceand CarOwner. The program should
 class Car                                      #class car
 
     def  byUser                              #method to get values from user        
-    puts "Enter the Model of car "
-    @model =gets
-    puts "Enter the Name of car "
-     @name =gets
-    puts "Enter the Price of car"
-     @price =gets
-    puts "Enter Owner of the car"
-    @owner=gets
+        puts "Enter the Model of car "
+        @model =gets
+        puts "Enter the Name of car "
+        @name =gets
+        puts "Enter the Price of car"
+        @price =gets
+        puts "Enter Owner of the car"
+        @owner=gets
     end
     
     def display
-    puts "\n\nModel is #{@model}"            #displaying output taken from user
-    puts "Name is #{@name}"
-    puts "Price is #{@price}"
-    puts "Owner is #{@owner}"
+        puts "\n\nModel is #{@model}"            #displaying output taken from user
+        puts "Name is #{@name}"
+        puts "Price is #{@price}"
+        puts "Owner is #{@owner}"
     end
 
  end 
