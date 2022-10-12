@@ -21,7 +21,7 @@ module SizeOfPizza
             
             when "large" || "Large"
             @cost2=14
-        else
+            else
             puts "Invalid"
         end
     end 
