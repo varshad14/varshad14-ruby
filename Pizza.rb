@@ -29,20 +29,26 @@ end
     
 module Toppings
     def toppings
-         if @no_of_cheese_toppings ||  @no_of_pepperoni_toppings || @no_of_ham_toppings
+        if @no_of_cheese_toppings ||  @no_of_pepperoni_toppings || @no_of_ham_toppings
              @cost1=2*(@no_of_cheese_toppings.to_i + @no_of_pepperoni_toppings.to_i + @no_of_ham_toppings.to_i)
-         end
+        end
     end
 end 
 
 module Order
     def getDescription
         puts "***YOUR ORDER ****"
-       print "\nPizza Size is: #{@size}\n"
-       print "No_of_cheese_toppings is: #{@no_of_cheese_toppings}\n"
-       print "No_of_pepperoni_toppings :#{@no_of_pepperoni_toppings}\n"
-       print "No_of_ham_toppings is: #{@no_of_ham_toppings}\n"
-   end
+        print "\nPizza Size is: #{@size}\n"
+        print "No_of_cheese_toppings is: #{@no_of_cheese_toppings}\n"
+        print "No_of_pepperoni_toppings :#{@no_of_pepperoni_toppings}\n"
+        print "No_of_ham_toppings is: #{@no_of_ham_toppings}\n"
+    end
+
+    def calCost
+        @Total=@cost1.to_i+ @cost2.to_i
+        print "_______________________________________________\n"
+        puts "\nTotal is #{@Total} "
+    end
 end
  
 
@@ -50,16 +56,18 @@ class Pizza
     prepend SizeOfPizza, Toppings,  Order
     
     def initialize size ,no_of_cheese_toppings, no_of_pepperoni_toppings, no_of_ham_toppings
-    @size=size
-    @no_of_cheese_toppings=no_of_cheese_toppings
-    @no_of_pepperoni_toppings=no_of_pepperoni_toppings
-    @no_of_ham_toppings=no_of_ham_toppings
+        @size=size
+        @no_of_cheese_toppings=no_of_cheese_toppings
+        @no_of_pepperoni_toppings=no_of_pepperoni_toppings
+        @no_of_ham_toppings=no_of_ham_toppings
     end
 
-    def calCost
-        @Total=@cost1.to_i+ @cost2.to_i
-        print "_______________________________________________\n"
-        puts "\nTotal is #{@Total} "
+    
+    def get_var
+        @size 
+        @no_of_cheese_toppings
+        @no_of_pepperoni_toppings
+        @no_of_ham_toppings
     end
 end
 
