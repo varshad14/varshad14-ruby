@@ -12,8 +12,8 @@ module Salary
     end 
 end
 module Work 
-    def add_work                 #3rd method to add bonus if work time is more than  6
-        if @hrs.to_i> 6        #condition to check if work time is more than 5
+    def add_work                 
+        if @hrs.to_i> 6        #condition to check if work time is more than 6
                 @bonus2=+5              #if true then bonus will increase by 5
        end
     end
