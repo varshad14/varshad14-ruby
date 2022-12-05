@@ -3,12 +3,12 @@ GradStudent  in  which PhdStudent  takesexam  by giving his final defense presen
  writtenpaper.
 =end
 module Phd
-    def take1                 #method overriding
+    def take1               
           puts "Phd student takes exam by Defense Presentation"
     end
 end 
 module Graduate 
-    def take2           #method overriding
+    def take2          
           puts "Graduation student takes exam by giving Written paper"
     end
 end  
