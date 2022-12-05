@@ -20,4 +20,5 @@ class Circle
    
 end
 
-Circle.new(2).calculate        
+c=Circle.new(2)
+c.calculate        
